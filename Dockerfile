@@ -25,8 +25,8 @@ ADD https://github.com/php/php-src.git#master .
 RUN doxygen -g Doxyfile
 
 ## configure Doxyfile
-## - set inputs: README.md docs/ Zend/ Zend/Optimizer/ main/ ext/
-## - set output directory to htmldocs/
+## - set inputs: README.md docs/ Zend/ Zend/Optimizer/ main/
+## - set output directory: htmldocs/
 ## - make Doxygen recurse into subdirectories and create subdirectories,
 ##   since it doesn't by default
 RUN sed -i "s/^\(PROJECT_NAME\s*=\s*\).*/\1 \"The PHP Interpreter\" /" Doxyfile && \
