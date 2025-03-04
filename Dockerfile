@@ -1,13 +1,11 @@
-FROM node:23-slim
-LABEL name="php-internal-docs"
+FROM ubuntu:24.04 AS builder
+LABEL name="php-internal-docs-builder"
 
-EXPOSE 8080
 WORKDIR /app
 
 # install dependencies
 RUN apt-get update && \
-	apt-get install -y curl graphviz && \
-	npm install -g http-server
+	apt-get install -y curl graphviz
 
 # setup doxygen
 # NOTE: we're not using `sudo apt-get install doxygen`
@@ -37,6 +35,18 @@ EOF
 
 ## build documentation
 RUN doxygen Doxyfile
+
+FROM node:23-slim
+LABEL name="php-internal-docs"
+
+EXPOSE 8080
+WORKDIR /app
+
+# install http-server
+RUN npm install -g http-server
+
+# copy generated documentation from builder stage
+COPY --from=builder /app/htmldocs/html /app/htmldocs/html
 
 ## run server
 CMD ["http-server", "./htmldocs/html/", "--port", "8080", "-a", "0.0.0.0"]

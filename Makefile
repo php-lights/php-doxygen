@@ -5,4 +5,9 @@ build-clean:
 serve:
 	docker run \
 		--detach \
-		-p 8080:8080 php-internals-docs
+		--platform linux/amd64 \
+		--name phpidocs \
+		-p ${PORT}:8080 php-internals-docs
+stop:
+	docker stop phpidocs
+	docker rm phpidocs
