@@ -21,25 +21,19 @@ RUN curl -L -o doxygen.tar.gz https://github.com/doxygen/doxygen/releases/downlo
 # pull source code of the PHP interpreter
 ADD https://github.com/php/php-src.git#master .
 
-## generate Doxyfile
-RUN doxygen -g Doxyfile
-
-## configure Doxyfile
-## - set inputs: README.md docs/ Zend/ Zend/Optimizer/ main/
-## - set output directory: htmldocs/
-## - recurse into subdirectories and create subdirectories
-## - extract all the symbols!
-## - don't generate LaTeX stuff
-RUN sed -i "s/^\(PROJECT_NAME\s*=\s*\).*/\1 \"The PHP Interpreter\" /" Doxyfile && \
-    sed -i "s/^\(PROJECT_BRIEF\s*=\s*\).*/\1 \"Unofficial generated docs for PHP interpreter's internal API\" /" Doxyfile && \
-    sed -i "s/^\(INPUT\s*=\s*\).*/\1 README.md docs\/ Zend\/ Zend\/Optimizer\/ main\/ /" Doxyfile && \
-    sed -i "s/^\(OUTPUT_DIRECTORY\s*=\s*\).*/\1 htmldocs /" Doxyfile && \
-    sed -i "s/^\(RECURSE\s*=\s*\).*/\1 YES /" Doxyfile && \
-    sed -i "s/^\(CREATE_SUBDIRS\s*=\s*\).*/\1 YES /" Doxyfile && \
-    sed -i "s/^\(SEPARATE_MEMBER_PAGES\s*=\s*\).*/\1 YES /" Doxyfile && \
-    sed -i "s/^\(SOURCE_BROWSER\s*=\s*\).*/\1 YES /" Doxyfile && \
-    sed -i "s/^\(EXTRACT_ALL\s*=\s*\).*/\1 YES /" Doxyfile && \
-    sed -i "s/^\(GENERATE_LATEX\s*=\s*\).*/\1 NO /" Doxyfile && \
+# configure Doxygen with Doxyfile
+RUN cat <<EOF >> Doxyfile
+PROJECT_NAME          = "The PHP Interpreter"
+PROJECT_BRIEF         = "Unofficial generated docs for PHP interpreter's internal API"
+INPUT                 = README.md docs/ Zend/ Zend/Optimizer/ main/
+OUTPUT_DIRECTORY      = htmldocs
+RECURSE               = YES
+CREATE_SUBDIRS        = YES
+SEPARATE_MEMBER_PAGES = YES
+SOURCE_BROWSER        = YES
+EXTRACT_ALL           = YES
+GENERATE_LATEX        = NO
+EOF
 
 ## build documentation
 RUN doxygen Doxyfile
