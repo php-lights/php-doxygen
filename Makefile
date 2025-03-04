@@ -1,3 +1,5 @@
+HOST_DIR ?= dist/
+
 build:
 	docker build -t "php-internals-docs" --platform=linux/amd64 .
 build-clean:
@@ -11,3 +13,5 @@ serve:
 stop:
 	docker stop phpidocs
 	docker rm phpidocs
+copy-host:
+	docker cp phpidocs:/app/htmldocs/html/ ${HOST_DIR}
