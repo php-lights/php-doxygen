@@ -1,0 +1,8 @@
+PROJECT_NAME  = "The PHP Interpreter"
+PROJECT_BRIEF = "Documentation of the internal PHP interpreter API"
+
+INPUT                 = README.md docs/ Zend/ main/
+RECURSE               = YES
+CREATE_SUBDIRS        = YES
+SEPARATE_MEMBER_PAGES = YES
+SOURCE_BROWSER        = YES
