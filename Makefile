@@ -1,5 +1,9 @@
+## variables
+PORT ?= 3000
 HOST_DIR ?= dist/
+NAME ?= phpidocs
 
+## commands
 build:
 	docker build -t "php-internals-docs" --platform=linux/amd64 .
 build-clean:
@@ -8,10 +12,10 @@ serve:
 	docker run \
 		--detach \
 		--platform linux/amd64 \
-		--name phpidocs \
+		--name ${NAME} \
 		-p ${PORT}:8080 php-internals-docs
 stop:
-	docker stop phpidocs
-	docker rm phpidocs
+	docker stop ${NAME}
+	docker rm ${NAME}
 copy-host:
-	docker cp phpidocs:/app/htmldocs/html/ ${HOST_DIR}
+	docker cp ${NAME}:/app/htmldocs/html/ ${HOST_DIR}

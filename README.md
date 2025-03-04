@@ -10,6 +10,6 @@ Commands below (requires GNU Make and Docker installed):
 | ---------------------- | ---------------------------------------------------- |
 | `make build`           | Build the project.                                   |
 | `make build-clean`     | Forcefully do a clean-build of project (no caching). |
-| `PORT=3000 make serve` | Run HTTP server on port 3000 and view docs at `http://localhost:3000`. Adjust port number (`PORT`) as needed. |
+| `make serve`           | Run HTTP server on `http://localhost:3000`. Adjustable via `PORT` |
 | `make stop`            | Stop HTTP server.                                    |
-| `make copy-host`       | Copy files from the container to the host, `./dist` by default. Adjust directory (`HOST_DIR`) as needed. |
+| `make copy-host`       | Copy files from the container to the host in `./dist`. Adjustable via `HOST_DIR` |
