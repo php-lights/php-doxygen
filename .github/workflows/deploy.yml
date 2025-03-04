@@ -26,8 +26,19 @@ jobs:
       - name: Install deployctl
         run: deno install -A jsr:@deno/deployctl --global
 
+      - name: Deploy documentation (dry-run PR)
+        if: github.event_name == 'pull_request'
+        run: deployctl deploy \
+          --dry-run \
+          --org=php-lights \
+          --name=php-internals-docs \
+          --include=./dist/ \
+          --entrypoint=jsr:@std/http/file-server
+
       - name: Deploy documentation
         if: github.event_name != 'pull_request'
         run: deployctl deploy \
+          --org=php-lights \
+          --name=php-internals-docs \
           --include=./dist/ \
           --entrypoint=jsr:@std/http/file-server
