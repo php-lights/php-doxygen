@@ -1,0 +1,33 @@
+name: Deploy docs to Deno Deploy
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Build documentation
+        run: make build
+      - name: Copy documentation from container to host
+        run: make copy-host
+
+      - name: Install Deno
+        uses: denoland/setup-deno@v2
+        with:
+          deno-version: v2.2.x
+      - name: Install deployctl
+        run: deno install -A jsr:@deno/deployctl --global
+
+      - name: Deploy documentation
+        if: github.event_name != 'pull_request'
+        run: deployctl deploy \
+          --include=./dist/ \
+          --entrypoint=jsr:@std/http/file-server
