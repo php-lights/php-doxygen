@@ -17,9 +17,7 @@ jobs:
       - name: Build documentation
         run: make build
       - name: Copy docs to host
-        run: make serve && \
-          make copy-host && \
-          make stop
+        run: make serve && make copy-host && make stop
 
       - name: Install Deno
         uses: denoland/setup-deno@v2
