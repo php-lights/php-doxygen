@@ -29,6 +29,7 @@ RUN doxygen -g Doxyfile
 ## - set output directory: htmldocs/
 ## - make Doxygen recurse into subdirectories and create subdirectories,
 ##   since it doesn't by default
+## - extract all the symbols!
 RUN sed -i "s/^\(PROJECT_NAME\s*=\s*\).*/\1 \"The PHP Interpreter\" /" Doxyfile && \
     sed -i "s/^\(PROJECT_BRIEF\s*=\s*\).*/\1 \"Unofficial generated docs for PHP interpreter's internal API\" /" Doxyfile && \
     sed -i "s/^\(INPUT\s*=\s*\).*/\1 README.md docs\/ Zend\/ Zend\/Optimizer\/ main\/ /" Doxyfile && \
@@ -36,7 +37,8 @@ RUN sed -i "s/^\(PROJECT_NAME\s*=\s*\).*/\1 \"The PHP Interpreter\" /" Doxyfile 
     sed -i "s/^\(RECURSE\s*=\s*\).*/\1 YES /" Doxyfile && \
     sed -i "s/^\(CREATE_SUBDIRS\s*=\s*\).*/\1 YES /" Doxyfile && \
     sed -i "s/^\(SEPARATE_MEMBER_PAGES\s*=\s*\).*/\1 YES /" Doxyfile && \
-    sed -i "s/^\(SOURCE_BROWSER\s*=\s*\).*/\1 YES /" Doxyfile
+    sed -i "s/^\(SOURCE_BROWSER\s*=\s*\).*/\1 YES /" Doxyfile && \
+    sed -i "s/^\(EXTRACT_ALL\s*=\s*\).*/\1 YES /" Doxyfile && \
 
 ## build documentation
 RUN doxygen Doxyfile
