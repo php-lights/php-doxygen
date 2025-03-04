@@ -1,0 +1,349 @@
+#0 building with "desktop-linux" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 676B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/node:latest
+#2 ...
+
+#3 [auth] library/node:pull token for registry-1.docker.io
+#3 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/node:latest
+#2 DONE 1.0s
+
+#4 [internal] load .dockerignore
+#4 transferring context: 2B done
+#4 DONE 0.0s
+
+#5 [ 1/11] FROM docker.io/library/node:latest@sha256:c29271c7f2b4788fe9b90a7506d790dc8f2ff46132e1b70e71bf0c0679c8451c
+#5 resolve docker.io/library/node:latest@sha256:c29271c7f2b4788fe9b90a7506d790dc8f2ff46132e1b70e71bf0c0679c8451c done
+#5 sha256:e12d6111ecee64ca9c78fa2ea67f44b7c1fdc321701678e4c3d191305d692360 445B / 445B 0.1s done
+#5 sha256:8e68fa4a0b563ad6c1eae56a0813bbd0086ca6e9872928c86e1503c9e05f5fa3 1.25MB / 1.25MB 0.2s done
+#5 sha256:ba6a4c71249a58dd212e43b9653bb2db11d8c6234260f1cfd80fd1a74cd84238 3.33kB / 3.33kB 0.2s done
+#5 sha256:583fdfd7aa97aa99da7ca5134be45223f2a03260f9c5dcda1ed4afd8647b4282 0B / 56.63MB 0.2s
+#5 sha256:07b751934b2d539e08bbeb74286bd83b8e643f22567925a547678fa8b235fa38 0B / 202.71MB 0.2s
+#5 sha256:e5701e2b5d2b168acc741a9ff3fdb127561218f08a68ad5dcc08b3d94a22fc9e 1.05MB / 23.60MB 0.2s
+#5 sha256:31d7468eece796ba37139bc942f068fc99cb7503eb828f59370c3421cca7d528 0B / 64.35MB 0.2s
+#5 sha256:07b751934b2d539e08bbeb74286bd83b8e643f22567925a547678fa8b235fa38 12.58MB / 202.71MB 0.6s
+#5 sha256:31d7468eece796ba37139bc942f068fc99cb7503eb828f59370c3421cca7d528 4.19MB / 64.35MB 0.5s
+#5 sha256:e5701e2b5d2b168acc741a9ff3fdb127561218f08a68ad5dcc08b3d94a22fc9e 3.15MB / 23.60MB 0.6s
+#5 sha256:31d7468eece796ba37139bc942f068fc99cb7503eb828f59370c3421cca7d528 8.39MB / 64.35MB 0.8s
+#5 sha256:583fdfd7aa97aa99da7ca5134be45223f2a03260f9c5dcda1ed4afd8647b4282 3.15MB / 56.63MB 1.2s
+#5 sha256:07b751934b2d539e08bbeb74286bd83b8e643f22567925a547678fa8b235fa38 23.07MB / 202.71MB 1.1s
+#5 sha256:31d7468eece796ba37139bc942f068fc99cb7503eb828f59370c3421cca7d528 13.63MB / 64.35MB 1.1s
+#5 sha256:e5701e2b5d2b168acc741a9ff3fdb127561218f08a68ad5dcc08b3d94a22fc9e 5.24MB / 23.60MB 1.2s
+#5 sha256:07b751934b2d539e08bbeb74286bd83b8e643f22567925a547678fa8b235fa38 35.65MB / 202.71MB 1.5s
+#5 sha256:31d7468eece796ba37139bc942f068fc99cb7503eb828f59370c3421cca7d528 19.92MB / 64.35MB 1.4s
+#5 sha256:31d7468eece796ba37139bc942f068fc99cb7503eb828f59370c3421cca7d528 25.17MB / 64.35MB 1.7s
+#5 sha256:07b751934b2d539e08bbeb74286bd83b8e643f22567925a547678fa8b235fa38 49.28MB / 202.71MB 2.0s
+#5 sha256:31d7468eece796ba37139bc942f068fc99cb7503eb828f59370c3421cca7d528 30.41MB / 64.35MB 2.0s
+#5 sha256:07b751934b2d539e08bbeb74286bd83b8e643f22567925a547678fa8b235fa38 62.91MB / 202.71MB 2.4s
+#5 sha256:31d7468eece796ba37139bc942f068fc99cb7503eb828f59370c3421cca7d528 36.70MB / 64.35MB 2.3s
+#5 sha256:31d7468eece796ba37139bc942f068fc99cb7503eb828f59370c3421cca7d528 40.89MB / 64.35MB 2.6s
+#5 sha256:07b751934b2d539e08bbeb74286bd83b8e643f22567925a547678fa8b235fa38 76.55MB / 202.71MB 2.9s
+#5 sha256:e5701e2b5d2b168acc741a9ff3fdb127561218f08a68ad5dcc08b3d94a22fc9e 7.34MB / 23.60MB 2.9s
+#5 sha256:31d7468eece796ba37139bc942f068fc99cb7503eb828f59370c3421cca7d528 46.14MB / 64.35MB 2.9s
+#5 sha256:583fdfd7aa97aa99da7ca5134be45223f2a03260f9c5dcda1ed4afd8647b4282 6.29MB / 56.63MB 3.5s
+#5 sha256:07b751934b2d539e08bbeb74286bd83b8e643f22567925a547678fa8b235fa38 90.18MB / 202.71MB 3.3s
+#5 sha256:31d7468eece796ba37139bc942f068fc99cb7503eb828f59370c3421cca7d528 51.38MB / 64.35MB 3.2s
+#5 sha256:e5701e2b5d2b168acc741a9ff3fdb127561218f08a68ad5dcc08b3d94a22fc9e 9.44MB / 23.60MB 3.5s
+#5 sha256:31d7468eece796ba37139bc942f068fc99cb7503eb828f59370c3421cca7d528 56.62MB / 64.35MB 3.6s
+#5 sha256:07b751934b2d539e08bbeb74286bd83b8e643f22567925a547678fa8b235fa38 102.76MB / 202.71MB 3.9s
+#5 sha256:e5701e2b5d2b168acc741a9ff3fdb127561218f08a68ad5dcc08b3d94a22fc9e 11.53MB / 23.60MB 3.9s
+#5 sha256:31d7468eece796ba37139bc942f068fc99cb7503eb828f59370c3421cca7d528 60.82MB / 64.35MB 3.9s
+#5 sha256:07b751934b2d539e08bbeb74286bd83b8e643f22567925a547678fa8b235fa38 119.54MB / 202.71MB 4.4s
+#5 sha256:31d7468eece796ba37139bc942f068fc99cb7503eb828f59370c3421cca7d528 64.35MB / 64.35MB 4.1s done
+#5 sha256:583fdfd7aa97aa99da7ca5134be45223f2a03260f9c5dcda1ed4afd8647b4282 9.44MB / 56.63MB 4.7s
+#5 sha256:52daf8b0f06f2fdaeb7dec4b92086a6e762488b98364a36c7abb3737d5423d3a 0B / 48.31MB 0.2s
+#5 sha256:07b751934b2d539e08bbeb74286bd83b8e643f22567925a547678fa8b235fa38 130.02MB / 202.71MB 4.7s
+#5 sha256:e5701e2b5d2b168acc741a9ff3fdb127561218f08a68ad5dcc08b3d94a22fc9e 13.63MB / 23.60MB 4.5s
+#5 sha256:52daf8b0f06f2fdaeb7dec4b92086a6e762488b98364a36c7abb3737d5423d3a 4.19MB / 48.31MB 0.6s
+#5 sha256:07b751934b2d539e08bbeb74286bd83b8e643f22567925a547678fa8b235fa38 143.65MB / 202.71MB 5.1s
+#5 sha256:52daf8b0f06f2fdaeb7dec4b92086a6e762488b98364a36c7abb3737d5423d3a 9.44MB / 48.31MB 0.9s
+#5 sha256:07b751934b2d539e08bbeb74286bd83b8e643f22567925a547678fa8b235fa38 157.29MB / 202.71MB 5.6s
+#5 sha256:52daf8b0f06f2fdaeb7dec4b92086a6e762488b98364a36c7abb3737d5423d3a 15.73MB / 48.31MB 1.2s
+#5 sha256:52daf8b0f06f2fdaeb7dec4b92086a6e762488b98364a36c7abb3737d5423d3a 20.97MB / 48.31MB 1.5s
+#5 sha256:07b751934b2d539e08bbeb74286bd83b8e643f22567925a547678fa8b235fa38 169.87MB / 202.71MB 6.0s
+#5 sha256:52daf8b0f06f2fdaeb7dec4b92086a6e762488b98364a36c7abb3737d5423d3a 26.21MB / 48.31MB 1.8s
+#5 sha256:52daf8b0f06f2fdaeb7dec4b92086a6e762488b98364a36c7abb3737d5423d3a 29.36MB / 48.31MB 2.0s
+#5 sha256:07b751934b2d539e08bbeb74286bd83b8e643f22567925a547678fa8b235fa38 184.55MB / 202.71MB 6.5s
+#5 sha256:52daf8b0f06f2fdaeb7dec4b92086a6e762488b98364a36c7abb3737d5423d3a 34.60MB / 48.31MB 2.3s
+#5 sha256:52daf8b0f06f2fdaeb7dec4b92086a6e762488b98364a36c7abb3737d5423d3a 37.75MB / 48.31MB 2.4s
+#5 sha256:07b751934b2d539e08bbeb74286bd83b8e643f22567925a547678fa8b235fa38 197.13MB / 202.71MB 6.9s
+#5 sha256:52daf8b0f06f2fdaeb7dec4b92086a6e762488b98364a36c7abb3737d5423d3a 40.89MB / 48.31MB 2.6s
+#5 sha256:07b751934b2d539e08bbeb74286bd83b8e643f22567925a547678fa8b235fa38 202.71MB / 202.71MB 7.2s done
+#5 sha256:52daf8b0f06f2fdaeb7dec4b92086a6e762488b98364a36c7abb3737d5423d3a 46.14MB / 48.31MB 2.9s
+#5 sha256:583fdfd7aa97aa99da7ca5134be45223f2a03260f9c5dcda1ed4afd8647b4282 13.63MB / 56.63MB 7.5s
+#5 sha256:e5701e2b5d2b168acc741a9ff3fdb127561218f08a68ad5dcc08b3d94a22fc9e 15.73MB / 23.60MB 7.2s
+#5 sha256:52daf8b0f06f2fdaeb7dec4b92086a6e762488b98364a36c7abb3737d5423d3a 48.31MB / 48.31MB 3.0s done
+#5 extracting sha256:52daf8b0f06f2fdaeb7dec4b92086a6e762488b98364a36c7abb3737d5423d3a
+#5 sha256:583fdfd7aa97aa99da7ca5134be45223f2a03260f9c5dcda1ed4afd8647b4282 16.78MB / 56.63MB 7.8s
+#5 sha256:e5701e2b5d2b168acc741a9ff3fdb127561218f08a68ad5dcc08b3d94a22fc9e 17.83MB / 23.60MB 7.5s
+#5 extracting sha256:52daf8b0f06f2fdaeb7dec4b92086a6e762488b98364a36c7abb3737d5423d3a 0.6s done
+#5 sha256:583fdfd7aa97aa99da7ca5134be45223f2a03260f9c5dcda1ed4afd8647b4282 20.97MB / 56.63MB 8.1s
+#5 sha256:e5701e2b5d2b168acc741a9ff3fdb127561218f08a68ad5dcc08b3d94a22fc9e 19.92MB / 23.60MB 7.8s
+#5 sha256:583fdfd7aa97aa99da7ca5134be45223f2a03260f9c5dcda1ed4afd8647b4282 24.12MB / 56.63MB 8.3s
+#5 sha256:e5701e2b5d2b168acc741a9ff3fdb127561218f08a68ad5dcc08b3d94a22fc9e 23.60MB / 23.60MB 8.2s done
+#5 sha256:583fdfd7aa97aa99da7ca5134be45223f2a03260f9c5dcda1ed4afd8647b4282 29.36MB / 56.63MB 8.6s
+#5 extracting sha256:e5701e2b5d2b168acc741a9ff3fdb127561218f08a68ad5dcc08b3d94a22fc9e
+#5 extracting sha256:e5701e2b5d2b168acc741a9ff3fdb127561218f08a68ad5dcc08b3d94a22fc9e 0.2s done
+#5 extracting sha256:31d7468eece796ba37139bc942f068fc99cb7503eb828f59370c3421cca7d528
+#5 sha256:583fdfd7aa97aa99da7ca5134be45223f2a03260f9c5dcda1ed4afd8647b4282 33.55MB / 56.63MB 8.9s
+#5 sha256:583fdfd7aa97aa99da7ca5134be45223f2a03260f9c5dcda1ed4afd8647b4282 37.75MB / 56.63MB 9.0s
+#5 sha256:583fdfd7aa97aa99da7ca5134be45223f2a03260f9c5dcda1ed4afd8647b4282 40.89MB / 56.63MB 9.2s
+#5 extracting sha256:31d7468eece796ba37139bc942f068fc99cb7503eb828f59370c3421cca7d528 0.7s done
+#5 sha256:583fdfd7aa97aa99da7ca5134be45223f2a03260f9c5dcda1ed4afd8647b4282 48.23MB / 56.63MB 9.5s
+#5 extracting sha256:07b751934b2d539e08bbeb74286bd83b8e643f22567925a547678fa8b235fa38
+#5 sha256:583fdfd7aa97aa99da7ca5134be45223f2a03260f9c5dcda1ed4afd8647b4282 52.43MB / 56.63MB 9.6s
+#5 sha256:583fdfd7aa97aa99da7ca5134be45223f2a03260f9c5dcda1ed4afd8647b4282 56.63MB / 56.63MB 9.8s
+#5 ...
+
+#6 [ 6/11] ADD https://github.com/php/php-src.git#master .
+#6 2.772 0df99742c4d8502fb10363f248ed9799407ddaaa	refs/heads/master
+#6 6.367 From https://github.com/php/php-src
+#6 6.367  * [new branch]        master     -> master
+#6 6.367  * [new branch]        master     -> origin/master
+#6 DONE 10.0s
+
+#5 [ 1/11] FROM docker.io/library/node:latest@sha256:c29271c7f2b4788fe9b90a7506d790dc8f2ff46132e1b70e71bf0c0679c8451c
+#5 sha256:583fdfd7aa97aa99da7ca5134be45223f2a03260f9c5dcda1ed4afd8647b4282 56.63MB / 56.63MB 9.9s done
+#5 extracting sha256:07b751934b2d539e08bbeb74286bd83b8e643f22567925a547678fa8b235fa38 2.5s done
+#5 DONE 11.9s
+
+#5 [ 1/11] FROM docker.io/library/node:latest@sha256:c29271c7f2b4788fe9b90a7506d790dc8f2ff46132e1b70e71bf0c0679c8451c
+#5 extracting sha256:ba6a4c71249a58dd212e43b9653bb2db11d8c6234260f1cfd80fd1a74cd84238 done
+#5 extracting sha256:583fdfd7aa97aa99da7ca5134be45223f2a03260f9c5dcda1ed4afd8647b4282
+#5 extracting sha256:583fdfd7aa97aa99da7ca5134be45223f2a03260f9c5dcda1ed4afd8647b4282 1.1s done
+#5 DONE 13.0s
+
+#5 [ 1/11] FROM docker.io/library/node:latest@sha256:c29271c7f2b4788fe9b90a7506d790dc8f2ff46132e1b70e71bf0c0679c8451c
+#5 extracting sha256:8e68fa4a0b563ad6c1eae56a0813bbd0086ca6e9872928c86e1503c9e05f5fa3 0.0s done
+#5 extracting sha256:e12d6111ecee64ca9c78fa2ea67f44b7c1fdc321701678e4c3d191305d692360 done
+#5 DONE 13.0s
+
+#7 [ 2/11] RUN apt-get update
+#7 0.167 Get:1 http://deb.debian.org/debian bookworm InRelease [151 kB]
+#7 0.201 Get:2 http://deb.debian.org/debian bookworm-updates InRelease [55.4 kB]
+#7 0.213 Get:3 http://deb.debian.org/debian-security bookworm-security InRelease [48.0 kB]
+#7 0.235 Get:4 http://deb.debian.org/debian bookworm/main arm64 Packages [8693 kB]
+#7 0.449 Get:5 http://deb.debian.org/debian bookworm-updates/main arm64 Packages [13.3 kB]
+#7 0.450 Get:6 http://deb.debian.org/debian-security bookworm-security/main arm64 Packages [242 kB]
+#7 1.090 Fetched 9202 kB in 1s (9445 kB/s)
+#7 1.090 Reading package lists...
+#7 DONE 1.6s
+
+#8 [ 3/11] RUN apt-get install -y doxygen graphviz
+#8 0.100 Reading package lists...
+#8 0.351 Building dependency tree...
+#8 0.415 Reading state information...
+#8 0.486 The following additional packages will be installed:
+#8 0.486   fonts-liberation2 libabsl20220623 libann0 libavif15 libcdt5 libcgraph6
+#8 0.486   libclang-cpp14 libclang1-14 libgav1-1 libgd3 libgts-0.7-5 libgts-bin libgvc6
+#8 0.487   libgvpr2 liblab-gamut1 libllvm14 libpathplan4 librav1e0 libsvtav1enc1
+#8 0.487   libxapian30 libxaw7 libxmu6 libxpm4 libyuv0 libz3-4
+#8 0.487 Suggested packages:
+#8 0.487   doxygen-latex doxygen-doc doxygen-gui gsfonts graphviz-doc libgd-tools
+#8 0.487   xapian-tools
+#8 0.592 The following NEW packages will be installed:
+#8 0.592   doxygen fonts-liberation2 graphviz libabsl20220623 libann0 libavif15 libcdt5
+#8 0.592   libcgraph6 libclang-cpp14 libclang1-14 libgav1-1 libgd3 libgts-0.7-5
+#8 0.592   libgts-bin libgvc6 libgvpr2 liblab-gamut1 libllvm14 libpathplan4 librav1e0
+#8 0.592   libsvtav1enc1 libxapian30 libxaw7 libxmu6 libxpm4 libyuv0 libz3-4
+#8 0.623 0 upgraded, 27 newly installed, 0 to remove and 0 not upgraded.
+#8 0.623 Need to get 52.6 MB of archives.
+#8 0.623 After this operation, 259 MB of additional disk space will be used.
+#8 0.623 Get:1 http://deb.debian.org/debian bookworm/main arm64 libz3-4 arm64 4.8.12-3.1 [6282 kB]
+#8 0.819 Get:2 http://deb.debian.org/debian bookworm/main arm64 libllvm14 arm64 1:14.0.6-12 [19.3 MB]
+#8 1.242 Get:3 http://deb.debian.org/debian bookworm/main arm64 libclang-cpp14 arm64 1:14.0.6-12 [9866 kB]
+#8 2.014 Get:4 http://deb.debian.org/debian bookworm/main arm64 libclang1-14 arm64 1:14.0.6-12 [5465 kB]
+#8 2.203 Get:5 http://deb.debian.org/debian bookworm/main arm64 libxapian30 arm64 1.4.22-1 [1017 kB]
+#8 2.215 Get:6 http://deb.debian.org/debian bookworm/main arm64 doxygen arm64 1.9.4-4 [4216 kB]
+#8 2.256 Get:7 http://deb.debian.org/debian bookworm/main arm64 fonts-liberation2 all 2.1.5-1 [1479 kB]
+#8 2.263 Get:8 http://deb.debian.org/debian bookworm/main arm64 libann0 arm64 1.1.2+doc-9+b1 [23.6 kB]
+#8 2.263 Get:9 http://deb.debian.org/debian bookworm/main arm64 libcdt5 arm64 2.42.2-7+deb12u1 [38.4 kB]
+#8 2.264 Get:10 http://deb.debian.org/debian bookworm/main arm64 libcgraph6 arm64 2.42.2-7+deb12u1 [59.7 kB]
+#8 2.265 Get:11 http://deb.debian.org/debian bookworm/main arm64 libabsl20220623 arm64 20220623.1-1 [363 kB]
+#8 2.267 Get:12 http://deb.debian.org/debian bookworm/main arm64 libgav1-1 arm64 0.18.0-1+b1 [425 kB]
+#8 2.270 Get:13 http://deb.debian.org/debian bookworm/main arm64 librav1e0 arm64 0.5.1-6 [552 kB]
+#8 2.274 Get:14 http://deb.debian.org/debian bookworm/main arm64 libsvtav1enc1 arm64 1.4.1+dfsg-1 [1074 kB]
+#8 2.283 Get:15 http://deb.debian.org/debian bookworm/main arm64 libyuv0 arm64 0.0~git20230123.b2528b0-1 [122 kB]
+#8 2.286 Get:16 http://deb.debian.org/debian bookworm/main arm64 libavif15 arm64 0.11.1-1 [88.3 kB]
+#8 2.287 Get:17 http://deb.debian.org/debian bookworm/main arm64 libxpm4 arm64 1:3.5.12-1.1+deb12u1 [45.4 kB]
+#8 2.288 Get:18 http://deb.debian.org/debian bookworm/main arm64 libgd3 arm64 2.3.3-9 [113 kB]
+#8 2.290 Get:19 http://deb.debian.org/debian bookworm/main arm64 libgts-0.7-5 arm64 0.7.6+darcs121130-5+b1 [142 kB]
+#8 2.292 Get:20 http://deb.debian.org/debian bookworm/main arm64 libpathplan4 arm64 2.42.2-7+deb12u1 [40.1 kB]
+#8 2.293 Get:21 http://deb.debian.org/debian bookworm/main arm64 libgvc6 arm64 2.42.2-7+deb12u1 [613 kB]
+#8 2.311 Get:22 http://deb.debian.org/debian bookworm/main arm64 libgvpr2 arm64 2.42.2-7+deb12u1 [178 kB]
+#8 2.315 Get:23 http://deb.debian.org/debian bookworm/main arm64 liblab-gamut1 arm64 2.42.2-7+deb12u1 [197 kB]
+#8 2.321 Get:24 http://deb.debian.org/debian bookworm/main arm64 libxmu6 arm64 2:1.1.3-3 [57.2 kB]
+#8 2.325 Get:25 http://deb.debian.org/debian bookworm/main arm64 libxaw7 arm64 2:1.0.14-1 [184 kB]
+#8 2.330 Get:26 http://deb.debian.org/debian bookworm/main arm64 graphviz arm64 2.42.2-7+deb12u1 [567 kB]
+#8 2.339 Get:27 http://deb.debian.org/debian bookworm/main arm64 libgts-bin arm64 0.7.6+darcs121130-5+b1 [45.7 kB]
+#8 2.470 debconf: delaying package configuration, since apt-utils is not installed
+#8 2.492 Fetched 52.6 MB in 2s (30.1 MB/s)
+#8 2.511 Selecting previously unselected package libz3-4:arm64.
+#8 2.511 (Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 23277 files and directories currently installed.)
+#8 2.522 Preparing to unpack .../00-libz3-4_4.8.12-3.1_arm64.deb ...
+#8 2.525 Unpacking libz3-4:arm64 (4.8.12-3.1) ...
+#8 2.899 Selecting previously unselected package libllvm14:arm64.
+#8 2.901 Preparing to unpack .../01-libllvm14_1%3a14.0.6-12_arm64.deb ...
+#8 2.903 Unpacking libllvm14:arm64 (1:14.0.6-12) ...
+#8 3.448 Selecting previously unselected package libclang-cpp14.
+#8 3.449 Preparing to unpack .../02-libclang-cpp14_1%3a14.0.6-12_arm64.deb ...
+#8 3.450 Unpacking libclang-cpp14 (1:14.0.6-12) ...
+#8 3.766 Selecting previously unselected package libclang1-14.
+#8 3.767 Preparing to unpack .../03-libclang1-14_1%3a14.0.6-12_arm64.deb ...
+#8 3.768 Unpacking libclang1-14 (1:14.0.6-12) ...
+#8 4.046 Selecting previously unselected package libxapian30:arm64.
+#8 4.047 Preparing to unpack .../04-libxapian30_1.4.22-1_arm64.deb ...
+#8 4.048 Unpacking libxapian30:arm64 (1.4.22-1) ...
+#8 4.090 Selecting previously unselected package doxygen.
+#8 4.091 Preparing to unpack .../05-doxygen_1.9.4-4_arm64.deb ...
+#8 4.092 Unpacking doxygen (1.9.4-4) ...
+#8 4.314 Selecting previously unselected package fonts-liberation2.
+#8 4.315 Preparing to unpack .../06-fonts-liberation2_2.1.5-1_all.deb ...
+#8 4.316 Unpacking fonts-liberation2 (2.1.5-1) ...
+#8 4.396 Selecting previously unselected package libann0.
+#8 4.397 Preparing to unpack .../07-libann0_1.1.2+doc-9+b1_arm64.deb ...
+#8 4.398 Unpacking libann0 (1.1.2+doc-9+b1) ...
+#8 4.407 Selecting previously unselected package libcdt5:arm64.
+#8 4.408 Preparing to unpack .../08-libcdt5_2.42.2-7+deb12u1_arm64.deb ...
+#8 4.409 Unpacking libcdt5:arm64 (2.42.2-7+deb12u1) ...
+#8 4.419 Selecting previously unselected package libcgraph6:arm64.
+#8 4.420 Preparing to unpack .../09-libcgraph6_2.42.2-7+deb12u1_arm64.deb ...
+#8 4.421 Unpacking libcgraph6:arm64 (2.42.2-7+deb12u1) ...
+#8 4.432 Selecting previously unselected package libabsl20220623:arm64.
+#8 4.433 Preparing to unpack .../10-libabsl20220623_20220623.1-1_arm64.deb ...
+#8 4.434 Unpacking libabsl20220623:arm64 (20220623.1-1) ...
+#8 4.470 Selecting previously unselected package libgav1-1:arm64.
+#8 4.471 Preparing to unpack .../11-libgav1-1_0.18.0-1+b1_arm64.deb ...
+#8 4.472 Unpacking libgav1-1:arm64 (0.18.0-1+b1) ...
+#8 4.503 Selecting previously unselected package librav1e0:arm64.
+#8 4.504 Preparing to unpack .../12-librav1e0_0.5.1-6_arm64.deb ...
+#8 4.505 Unpacking librav1e0:arm64 (0.5.1-6) ...
+#8 4.541 Selecting previously unselected package libsvtav1enc1:arm64.
+#8 4.542 Preparing to unpack .../13-libsvtav1enc1_1.4.1+dfsg-1_arm64.deb ...
+#8 4.543 Unpacking libsvtav1enc1:arm64 (1.4.1+dfsg-1) ...
+#8 4.603 Selecting previously unselected package libyuv0:arm64.
+#8 4.605 Preparing to unpack .../14-libyuv0_0.0~git20230123.b2528b0-1_arm64.deb ...
+#8 4.605 Unpacking libyuv0:arm64 (0.0~git20230123.b2528b0-1) ...
+#8 4.620 Selecting previously unselected package libavif15:arm64.
+#8 4.621 Preparing to unpack .../15-libavif15_0.11.1-1_arm64.deb ...
+#8 4.622 Unpacking libavif15:arm64 (0.11.1-1) ...
+#8 4.635 Selecting previously unselected package libxpm4:arm64.
+#8 4.636 Preparing to unpack .../16-libxpm4_1%3a3.5.12-1.1+deb12u1_arm64.deb ...
+#8 4.637 Unpacking libxpm4:arm64 (1:3.5.12-1.1+deb12u1) ...
+#8 4.647 Selecting previously unselected package libgd3:arm64.
+#8 4.649 Preparing to unpack .../17-libgd3_2.3.3-9_arm64.deb ...
+#8 4.650 Unpacking libgd3:arm64 (2.3.3-9) ...
+#8 4.664 Selecting previously unselected package libgts-0.7-5:arm64.
+#8 4.665 Preparing to unpack .../18-libgts-0.7-5_0.7.6+darcs121130-5+b1_arm64.deb ...
+#8 4.666 Unpacking libgts-0.7-5:arm64 (0.7.6+darcs121130-5+b1) ...
+#8 4.682 Selecting previously unselected package libpathplan4:arm64.
+#8 4.683 Preparing to unpack .../19-libpathplan4_2.42.2-7+deb12u1_arm64.deb ...
+#8 4.684 Unpacking libpathplan4:arm64 (2.42.2-7+deb12u1) ...
+#8 4.694 Selecting previously unselected package libgvc6.
+#8 4.695 Preparing to unpack .../20-libgvc6_2.42.2-7+deb12u1_arm64.deb ...
+#8 4.696 Unpacking libgvc6 (2.42.2-7+deb12u1) ...
+#8 4.734 Selecting previously unselected package libgvpr2:arm64.
+#8 4.735 Preparing to unpack .../21-libgvpr2_2.42.2-7+deb12u1_arm64.deb ...
+#8 4.736 Unpacking libgvpr2:arm64 (2.42.2-7+deb12u1) ...
+#8 4.754 Selecting previously unselected package liblab-gamut1:arm64.
+#8 4.756 Preparing to unpack .../22-liblab-gamut1_2.42.2-7+deb12u1_arm64.deb ...
+#8 4.757 Unpacking liblab-gamut1:arm64 (2.42.2-7+deb12u1) ...
+#8 4.801 Selecting previously unselected package libxmu6:arm64.
+#8 4.802 Preparing to unpack .../23-libxmu6_2%3a1.1.3-3_arm64.deb ...
+#8 4.803 Unpacking libxmu6:arm64 (2:1.1.3-3) ...
+#8 4.814 Selecting previously unselected package libxaw7:arm64.
+#8 4.815 Preparing to unpack .../24-libxaw7_2%3a1.0.14-1_arm64.deb ...
+#8 4.816 Unpacking libxaw7:arm64 (2:1.0.14-1) ...
+#8 4.833 Selecting previously unselected package graphviz.
+#8 4.835 Preparing to unpack .../25-graphviz_2.42.2-7+deb12u1_arm64.deb ...
+#8 4.836 Unpacking graphviz (2.42.2-7+deb12u1) ...
+#8 4.879 Selecting previously unselected package libgts-bin.
+#8 4.880 Preparing to unpack .../26-libgts-bin_0.7.6+darcs121130-5+b1_arm64.deb ...
+#8 4.881 Unpacking libgts-bin (0.7.6+darcs121130-5+b1) ...
+#8 4.897 Setting up libxapian30:arm64 (1.4.22-1) ...
+#8 4.900 Setting up libabsl20220623:arm64 (20220623.1-1) ...
+#8 4.903 Setting up libxmu6:arm64 (2:1.1.3-3) ...
+#8 4.905 Setting up libxpm4:arm64 (1:3.5.12-1.1+deb12u1) ...
+#8 4.907 Setting up liblab-gamut1:arm64 (2.42.2-7+deb12u1) ...
+#8 4.909 Setting up libxaw7:arm64 (2:1.0.14-1) ...
+#8 4.912 Setting up libsvtav1enc1:arm64 (1.4.1+dfsg-1) ...
+#8 4.914 Setting up librav1e0:arm64 (0.5.1-6) ...
+#8 4.917 Setting up libgts-0.7-5:arm64 (0.7.6+darcs121130-5+b1) ...
+#8 4.920 Setting up libz3-4:arm64 (4.8.12-3.1) ...
+#8 4.922 Setting up fonts-liberation2 (2.1.5-1) ...
+#8 4.924 Setting up libpathplan4:arm64 (2.42.2-7+deb12u1) ...
+#8 4.926 Setting up libann0 (1.1.2+doc-9+b1) ...
+#8 4.929 Setting up libgav1-1:arm64 (0.18.0-1+b1) ...
+#8 4.931 Setting up libllvm14:arm64 (1:14.0.6-12) ...
+#8 4.934 Setting up libcdt5:arm64 (2.42.2-7+deb12u1) ...
+#8 4.936 Setting up libcgraph6:arm64 (2.42.2-7+deb12u1) ...
+#8 4.939 Setting up libyuv0:arm64 (0.0~git20230123.b2528b0-1) ...
+#8 4.941 Setting up libgts-bin (0.7.6+darcs121130-5+b1) ...
+#8 4.943 Setting up libavif15:arm64 (0.11.1-1) ...
+#8 4.945 Setting up libclang1-14 (1:14.0.6-12) ...
+#8 4.948 Setting up libgd3:arm64 (2.3.3-9) ...
+#8 4.950 Setting up libgvc6 (2.42.2-7+deb12u1) ...
+#8 4.963 Setting up libclang-cpp14 (1:14.0.6-12) ...
+#8 4.966 Setting up libgvpr2:arm64 (2.42.2-7+deb12u1) ...
+#8 4.969 Setting up graphviz (2.42.2-7+deb12u1) ...
+#8 4.971 Setting up doxygen (1.9.4-4) ...
+#8 4.974 Processing triggers for libc-bin (2.36-9+deb12u9) ...
+#8 4.989 Processing triggers for fontconfig (2.14.1-4) ...
+#8 DONE 5.2s
+
+#9 [ 4/11] RUN npm install -g http-server
+#9 1.617 
+#9 1.617 added 50 packages in 1s
+#9 1.617 
+#9 1.617 15 packages are looking for funding
+#9 1.617   run `npm fund` for details
+#9 1.618 npm notice
+#9 1.618 npm notice New major version of npm available! 10.9.2 -> 11.1.0
+#9 1.618 npm notice Changelog: https://github.com/npm/cli/releases/tag/v11.1.0
+#9 1.618 npm notice To update run: npm install -g npm@11.1.0
+#9 1.618 npm notice
+#9 DONE 1.7s
+
+#10 [ 5/11] RUN doxygen -v
+#10 0.110 1.9.4
+#10 DONE 0.1s
+
+#11 [ 6/11] ADD https://github.com/php/php-src.git#master .
+#11 DONE 0.8s
+
+#12 [ 7/11] RUN doxygen -g Doxyfile
+#12 0.131 
+#12 0.131 
+#12 0.131 Configuration file 'Doxyfile' created.
+#12 0.131 
+#12 0.131 Now edit the configuration file and enter
+#12 0.131 
+#12 0.131   doxygen
+#12 0.131 
+#12 0.131 to generate the documentation for your project
+#12 0.131 
+#12 DONE 0.1s
+
+#13 [ 8/11] RUN sed -i 's/^\(INPUT\s*=\s*\).*/\1 \/ Zend\/ main\/ ext\/ /' .env
+#13 0.102 sed: can't read .env: No such file or directory
+#13 ERROR: process "/bin/sh -c sed -i 's/^\\(INPUT\\s*=\\s*\\).*/\\1 \\/ Zend\\/ main\\/ ext\\/ /' .env" did not complete successfully: exit code: 2
+------
+ > [ 8/11] RUN sed -i 's/^\(INPUT\s*=\s*\).*/\1 \/ Zend\/ main\/ ext\/ /' .env:
+0.102 sed: can't read .env: No such file or directory
+------
+Dockerfile:14
+--------------------
+  12 |     
+  13 |     ## modify input directory to run from: / Zend/ main/ ext/
+  14 | >>> RUN sed -i 's/^\(INPUT\s*=\s*\).*/\1 \/ Zend\/ main\/ ext\/ /' .env
+  15 |     
+  16 |     ## modify output
+--------------------
+ERROR: failed to solve: process "/bin/sh -c sed -i 's/^\\(INPUT\\s*=\\s*\\).*/\\1 \\/ Zend\\/ main\\/ ext\\/ /' .env" did not complete successfully: exit code: 2
+
+View build details: docker-desktop://dashboard/build/desktop-linux/desktop-linux/aipo4vt097ftx7rczirams171
