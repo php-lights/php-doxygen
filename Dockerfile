@@ -27,7 +27,7 @@ RUN cat <<EOF >> Doxyfile
 PROJECT_NAME           = "The PHP Interpreter"
 PROJECT_BRIEF          = "Unofficial generated docs for PHP interpreter's internal API"
 
-INPUT                  = README.md docs/ Zend/ main/
+INPUT                  = README.md docs/ Zend/ main/ ext/ sapi/
 EXCLUDE_PATTERNS       = */tests \
                          *.inc
 RECURSIVE              = YES
