@@ -21,4 +21,4 @@ stop:
 	docker stop ${NAME}
 	docker rm ${NAME}
 copy-host:
-	docker cp ${NAME}:/app/htmldocs/html/ ${HOST_DIR}
+	docker cp ${NAME}:/app/docs/ ${HOST_DIR}
