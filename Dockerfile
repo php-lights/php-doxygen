@@ -16,25 +16,43 @@ RUN curl -L -o doxygen.tar.gz https://github.com/doxygen/doxygen/releases/downlo
 	rm -rf doxygen-1.13.2 doxygen.tar.gz && \
 	doxygen --version
 
-# pull source code of the PHP interpreter
-ADD https://github.com/php/php-src.git#master .
+# pull source code of the PHP interpreter,
+# and a custom Doxygen theme for better UX
+ADD https://github.com/php/php-src.git#master ./php-src/
+
+WORKDIR /app/php-src/
 
 # configure Doxygen with Doxyfile
 RUN cat <<EOF >> Doxyfile
-PROJECT_NAME          = "The PHP Interpreter"
-PROJECT_BRIEF         = "Unofficial generated docs for PHP interpreter's internal API"
-INPUT                 = README.md docs/ Zend/ Zend/Optimizer/ main/
-OUTPUT_DIRECTORY      = htmldocs
-RECURSE               = YES
-CREATE_SUBDIRS        = YES
-SEPARATE_MEMBER_PAGES = YES
-SOURCE_BROWSER        = YES
-EXTRACT_ALL           = YES
-GENERATE_LATEX        = NO
+PROJECT_NAME           = "The PHP Interpreter"
+PROJECT_BRIEF          = "Unofficial generated docs for PHP interpreter's internal API"
+
+INPUT                  = README.md docs/ Zend/ main/
+EXCLUDE_PATTERNS       = */tests \
+                         *.inc
+RECURSIVE              = YES
+CREATE_SUBDIRS         = NO
+SOURCE_BROWSER         = YES
+FILE_PATTERNS          = *.php \
+                         *.c \
+                         *.h \
+                         *.md \
+                         *.rst
+USE_MDFILE_AS_MAINPAGE = README.md
+
+OPTIMIZE_OUTPUT_FOR_C  = YES
+OUTPUT_DIRECTORY       = ./htmldocs
+DISABLE_INDEX          = NO
+GENERATE_TREEVIEW      = YES
+
+EXTRACT_ALL            = YES
+GENERATE_LATEX         = NO
 EOF
 
 ## build documentation
 RUN doxygen Doxyfile
+
+RUN pwd && ls -la
 
 FROM node:23-slim
 LABEL name="php-internal-docs"
@@ -46,7 +64,7 @@ WORKDIR /app
 RUN npm install -g http-server
 
 # copy generated documentation from builder stage
-COPY --from=builder /app/htmldocs/html /app/htmldocs/html
+COPY --from=builder /app/php-src/htmldocs/html /app/docs
 
 ## run server
-CMD ["http-server", "./htmldocs/html/", "--port", "8080", "-a", "0.0.0.0"]
+CMD ["http-server", "./docs", "--port", "8080", "-a", "0.0.0.0"]
