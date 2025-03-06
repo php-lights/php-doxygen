@@ -18,15 +18,16 @@ RUN curl -L -o doxygen.tar.gz https://github.com/doxygen/doxygen/releases/downlo
 
 # pull source code of the PHP interpreter,
 # and a custom Doxygen theme for better UX
-ADD https://github.com/php/php-src.git#master ./php-src/
+ADD https://github.com/php/php-src.git#php-8.4.4 ./php-src/
 ADD https://github.com/jothepro/doxygen-awesome-css.git#v2.3.4 ./php-src/doxygen-awesome-css
 
 WORKDIR /app/php-src/
 
 # configure Doxygen with Doxyfile
 RUN cat <<EOF >> Doxyfile
-PROJECT_NAME           = "The PHP Interpreter"
-PROJECT_BRIEF          = "Unofficial generated docs for PHP interpreter's internal API"
+PROJECT_NAME           = "php-internal-docs"
+PROJECT_BRIEF          = "Unofficial docs for php/php-src"
+PROJECT_NUMBER         = 8.4.4
 
 INPUT                  = README.md docs/ Zend/ main/ ext/ sapi/
 EXCLUDE_PATTERNS       = */tests \
