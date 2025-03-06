@@ -22,3 +22,5 @@ stop:
 	docker rm ${NAME}
 copy-host:
 	docker cp ${NAME}:/app/docs/ ${HOST_DIR}
+lint:
+	hadolint --ignore DL3008 Dockerfile

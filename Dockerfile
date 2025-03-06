@@ -5,7 +5,7 @@ WORKDIR /app
 
 # install dependencies
 RUN apt-get update && \
-	apt-get install -y curl graphviz
+	apt-get install -y curl graphviz --no-install-recommends
 
 # setup doxygen
 # NOTE: we're not using `sudo apt-get install doxygen`
@@ -29,7 +29,7 @@ PROJECT_NAME           = "php-internal-docs"
 PROJECT_BRIEF          = "Unofficial docs for php/php-src"
 PROJECT_NUMBER         = 8.4.4
 
-INPUT                  = README.md LICENSE docs/ Zend/ main/ ext/ sapi/ win32/
+INPUT                  = README.md LICENSE docs/ docs-old/ Zend/ main/ ext/ sapi/ win32/
 EXCLUDE_PATTERNS       = */tests \
                          *.inc
 RECURSIVE              = YES
@@ -58,9 +58,8 @@ GENERATE_LATEX         = NO
 EOF
 
 ## build documentation
-RUN doxygen Doxyfile
-
-RUN pwd && ls -la
+RUN doxygen Doxyfile && \
+	pwd && ls -la
 
 FROM node:23-slim
 LABEL name="php-internal-docs"
@@ -69,7 +68,7 @@ EXPOSE 8080
 WORKDIR /app
 
 # install http-server
-RUN npm install -g http-server
+RUN npm install -g http-server@14.1.1
 
 # copy generated documentation from builder stage
 COPY --from=builder /app/php-src/htmldocs/html /app/docs
