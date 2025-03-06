@@ -29,7 +29,7 @@ PROJECT_NAME           = "php-internal-docs"
 PROJECT_BRIEF          = "Unofficial docs for php/php-src"
 PROJECT_NUMBER         = 8.4.4
 
-INPUT                  = README.md docs/ Zend/ main/ ext/ sapi/
+INPUT                  = README.md LICENSE docs/ Zend/ main/ ext/ sapi/ win32/
 EXCLUDE_PATTERNS       = */tests \
                          *.inc
 RECURSIVE              = YES
@@ -51,6 +51,7 @@ FULL_SIDEBAR           = NO
 HTML_EXTRA_STYLESHEET  = doxygen-awesome-css/doxygen-awesome.css \
                          doxygen-awesome-css/doxygen-awesome-sidebar-only.css
 HTML_COLORSTYLE        = LIGHT
+TIMESTAMP              = YES
 
 EXTRACT_ALL            = YES
 GENERATE_LATEX         = NO
