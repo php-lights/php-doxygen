@@ -5,7 +5,7 @@ WORKDIR /app
 
 # install dependencies
 RUN apt-get update && \
-	apt-get install -y curl graphviz --no-install-recommends
+	apt-get install -y curl graphviz
 
 # setup doxygen
 # NOTE: we're not using `sudo apt-get install doxygen`

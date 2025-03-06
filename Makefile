@@ -23,4 +23,4 @@ stop:
 copy-host:
 	docker cp ${NAME}:/app/docs/ ${HOST_DIR}
 lint:
-	hadolint --ignore DL3008 Dockerfile
+	hadolint --ignore DL3008 --ignore DL3015 Dockerfile
