@@ -19,6 +19,7 @@ RUN curl -L -o doxygen.tar.gz https://github.com/doxygen/doxygen/releases/downlo
 # pull source code of the PHP interpreter,
 # and a custom Doxygen theme for better UX
 ADD https://github.com/php/php-src.git#master ./php-src/
+ADD https://github.com/jothepro/doxygen-awesome-css.git#v2.3.4 ./php-src/doxygen-awesome-css
 
 WORKDIR /app/php-src/
 
@@ -42,8 +43,13 @@ USE_MDFILE_AS_MAINPAGE = README.md
 
 OPTIMIZE_OUTPUT_FOR_C  = YES
 OUTPUT_DIRECTORY       = ./htmldocs
-DISABLE_INDEX          = NO
+
 GENERATE_TREEVIEW      = YES
+DISABLE_INDEX          = NO
+FULL_SIDEBAR           = NO
+HTML_EXTRA_STYLESHEET  = doxygen-awesome-css/doxygen-awesome.css \
+                         doxygen-awesome-css/doxygen-awesome-sidebar-only.css
+HTML_COLORSTYLE        = LIGHT
 
 EXTRACT_ALL            = YES
 GENERATE_LATEX         = NO
