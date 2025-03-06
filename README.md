@@ -8,7 +8,10 @@ Documentation is automatically generated from the [php/php-src](https://github.c
 
 ## Running locally
 
-Commands below (requires GNU Make and Docker installed):
+- Required: GNU Make, Docker
+- Optional: [`hadolint`](https://github.com/hadolint/hadolint)
+
+Commands below:
 
 | Command            | Description                                          |
 | ------------------ | ---------------------------------------------------- |
@@ -17,3 +20,4 @@ Commands below (requires GNU Make and Docker installed):
 | `make serve`       | Run HTTP server on `http://localhost:3000`. Adjustable via `PORT` |
 | `make stop`        | Stop HTTP server.                                    |
 | `make copy-host`   | Copy files from the container to the host in `./dist`. Adjustable via `HOST_DIR` |
+| `make lint`        | Lint the [`Dockerfile`](./Dockerfile)                |
